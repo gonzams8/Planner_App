@@ -17,8 +17,15 @@ def get_coordinates(city):
   )
 
   result = completion.choices[0].message.content.strip()
+
   if "lat=NA" in result or "lon=NA" in result:
-    print("⚠️ Ciudad no encontrada. Verifica el nombre e intenta nuevamente")
-    return None
-  
-  return result
+      print("⚠️ Ciudad no encontrada. Verifica el nombre e intenta nuevamente.")
+      return None
+
+  # Parseo seguro
+  try:
+      lat, lon = result.replace("lat=", "").replace("lon=", "").split("&")
+      return f"lat={lat}&lon={lon}"
+  except Exception as e:
+      print(f"❌ Error al parsear coordenadas: {e}")
+      return None

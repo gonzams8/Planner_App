@@ -1,7 +1,7 @@
-from geo_utils import get_coordinates
-from weather_utils import get_weather
-from plan_generator import generate_plan
-from voice_utils import text_to_speech
+from planner.geo_utils import get_coordinates
+from planner.weather_utils import get_weather
+from planner.plan_generator import generate_plan
+from planner.voice_utils import text_to_speech
 
 def main():
     city = input("🌍 Ingresa una ciudad: ")
