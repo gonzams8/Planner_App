@@ -2,6 +2,8 @@
 **A Python app that combines OpenWeatherMap, OpenAI, and ElevenLabs to suggest weather-based plans for any city — and reads them out loud!**
 Perfect as a daily assistant or creative side project.
 
+**The app is built in Spanish, showcasing my ability to develop multilingual solutions.**
+
 ## 🧠 What does this app do?
 1. Gets the current weather of any city using OpenWeatherMap.
 2. Uses OpenAI to generate personalized plans based on real-time weather conditions.
